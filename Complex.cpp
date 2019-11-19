@@ -157,6 +157,10 @@ Complex operator/(double lhs, const Complex& rhs) {
 	return lhs * rhs.conjugate() / (rhs.modulus() * rhs.modulus());
 }
 
-Complex Complex::exp(const Complex& arg) {
+Complex Complex::cexp(const Complex& arg) {
 	return Complex(cos(arg.real), sin(arg.imaginary));
+}
+
+Complex Complex::csqrt(double arg) {
+	return arg < 0 ? Complex(0, sqrt(arg)) : Complex(sqrt(arg), 0);
 }

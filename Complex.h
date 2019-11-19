@@ -34,7 +34,8 @@ public:
 	friend Complex operator-(double lhs, const Complex& rhs);
 	friend Complex operator*(double lhs, const Complex& rhs);
 	friend Complex operator/(double lhs, const Complex& rhs);
-	Complex exp(const Complex& arg);
+	static Complex cexp(const Complex& arg);
+	static Complex csqrt(double arg);
 private:
 	double real;
 	double imaginary;
